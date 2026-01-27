@@ -17,6 +17,14 @@ public class Impresora {
     }
 
 
+
+    public void addToner (int cantidad){
+        if (nivelToner < 0 || nivelToner > 100) {
+            this.nivelToner = -1;
+        } else {
+            setNivelToner(cantidad);
+        }
+    }
     public int imprimirPaginas(int paginas) {
         // imprime paginas, divide la cantidad de paginas si es de doble cara
         if (ImpDobleCara) {
@@ -32,5 +40,9 @@ public class Impresora {
 
     public int getNivelToner() {
         return nivelToner;
+    }
+
+    public void setNivelToner(int nivelToner) {
+        this.nivelToner += nivelToner;
     }
 }

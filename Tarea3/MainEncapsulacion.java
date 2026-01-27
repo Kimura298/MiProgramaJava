@@ -13,6 +13,11 @@ public class MainEncapsulacion {
         int paginasDeseadas = 0;
         paginasDeseadas = sc.nextInt();
 
+        System.out.print("Añade toner: ");
+        int cantidadTo = 0;
+        cantidadTo = sc.nextInt();
+        imp.setNivelToner(cantidadTo);
+
         /**
          * Imprime las paginas solicitadas por Scanner
          * @param paginasDeseadas paginas que deseas imprimir;
@@ -24,6 +29,7 @@ public class MainEncapsulacion {
 
         int hojas = imp.imprimirPaginas(paginasDeseadas);
         System.out.println("Paginas solicitadas: " + paginasDeseadas);
+        System.out.println("Toner añadido: " + imp.getNivelToner());
         System.out.println("Hojas usadas: " + hojas);
         System.out.println("Total de paginas impresas: " + imp.getNumPagImp());
     }
