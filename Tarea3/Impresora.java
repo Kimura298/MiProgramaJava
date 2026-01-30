@@ -17,14 +17,22 @@ public class Impresora {
     }
 
 
-
-    public void addToner (int cantidad){
-        if (nivelToner < 0 || nivelToner > 100) {
+    public int addToner(int cantidad) {
+        if (this.nivelToner + cantidad < 0 || this.nivelToner + cantidad > 100) {
             this.nivelToner = -1;
-        } else {
-            setNivelToner(cantidad);
         }
+        return this.nivelToner + cantidad;
     }
+
+    //   public void addToner (int cantidad){
+    //        if (nivelToner < 0 || nivelToner > 100) {
+    //            this.nivelToner = -1;
+    //        } else {
+    //            setNivelToner(cantidad);
+    //        }
+    //    }
+
+
     public int imprimirPaginas(int paginas) {
         // imprime paginas, divide la cantidad de paginas si es de doble cara
         if (ImpDobleCara) {
@@ -43,6 +51,15 @@ public class Impresora {
     }
 
     public void setNivelToner(int nivelToner) {
-        this.nivelToner += nivelToner;
+        this.nivelToner = nivelToner;
     }
+
+
 }
+
+
+
+
+
+
+
