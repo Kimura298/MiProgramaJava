@@ -1,0 +1,6 @@
+3.
+    a.Si
+    b.Una clase solo puede heredar de una clase abstracta pero puede implementar varias interfaces
+    las interfaces no tienen constructores pero las abstractas si.
+    c Si, que sea abstracta no quiere decir que no pueda al igual que una clase normal.
+
